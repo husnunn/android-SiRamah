@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.gridy.rohmahapp.pages.dashboard.DashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.gridy.rohmahapp.pages.attendance.AttendanceFragment"
+        android:label="Attendance" />
+
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.gridy.rohmahapp.pages.schedule.ScheduleFragment"
+        android:label="Schedule" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.gridy.rohmahapp.pages.profile.ProfileFragment"
+        android:label="Profile" />
+</navigation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#7ACCA8</color>
+    <color name="primary_container">#0F4D3A</color>
+    <color name="on_primary">#003821</color>
+    <color name="on_primary_container">#A0F4CA</color>
+    <color name="primary_fixed">#A0F4CA</color>
+    <color name="error">#FFB4A9</color>
+
+    <color name="secondary">#B4C5FC</color>
+    <color name="secondary_container">#3F4A73</color>
+    <color name="on_secondary">#15224A</color>
+    <color name="on_secondary_container">#D9E3FF</color>
+
+    <color name="tertiary">#F2C76D</color>
+    <color name="tertiary_container">#5C4300</color>
+    <color name="tertiary_fixed">#6B5420</color>
+    <color name="on_tertiary">#271E00</color>
+    <color name="on_tertiary_container">#F3E2B8</color>
+
+    <color name="background">#101413</color>
+    <color name="on_background">#E0E3E1</color>
+
+    <color name="surface">#101413</color>
+    <color name="on_surface">#E0E3E1</color>
+    <color name="surface_variant">#3F4943</color>
+    <color name="on_surface_variant">#BEC9C1</color>
+
+    <color name="surface_container_lowest">#0B0F0E</color>
+    <color name="surface_container_low">#161B19</color>
+    <color name="surface_container">#1B211F</color>
+    <color name="surface_container_high">#252B29</color>
+    <color name="surface_container_highest">#303634</color>
+
+    <color name="outline">#89938D</color>
+    <color name="outline_variant">#3F4943</color>
+
+    <color name="error_red_fill_map">#4DEF5350</color>
+    <color name="error_red_stroke_map">#CCDC2626</color>
+
+    <color name="on_brand">#FFFFFF</color>
+    <color name="on_error">#690005</color>
+
+    <color name="brand_frost_10">#1AFFFFFF</color>
+    <color name="brand_frost_20">#33FFFFFF</color>
+    <color name="scrim_60">#99000000</color>
+
+    <color name="primary_alpha_10">#1A7ACCA8</color>
+    <color name="primary_alpha_8">#147ACCA8</color>
+
+    <color name="on_tertiary_fixed_variant">#F0E0BB</color>
+</resources>

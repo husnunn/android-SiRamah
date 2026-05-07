@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#573e00",
+                      "surface-container": "#edeeef",
+                      "surface": "#f8f9fa",
+                      "secondary": "#4a5d8f",
+                      "surface-container-highest": "#e1e3e4",
+                      "inverse-primary": "#84d7af",
+                      "tertiary-fixed-dim": "#e9c176",
+                      "on-surface-variant": "#3f4943",
+                      "secondary-fixed": "#dae2ff",
+                      "tertiary-container": "#725515",
+                      "surface-tint": "#0b6c4b",
+                      "primary": "#004d34",
+                      "on-background": "#191c1d",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#b2c5fe",
+                      "on-secondary-fixed-variant": "#314575",
+                      "on-tertiary-fixed": "#261900",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#bec9c1",
+                      "on-primary-container": "#8fe2ba",
+                      "surface-container-low": "#f3f4f5",
+                      "outline": "#6f7a72",
+                      "on-surface": "#191c1d",
+                      "on-primary-fixed-variant": "#005137",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-tertiary-fixed-variant": "#5d4201",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#ffdea5",
+                      "surface-bright": "#f8f9fa",
+                      "surface-dim": "#d9dadb",
+                      "surface-container-high": "#e7e8e9",
+                      "secondary-container": "#b2c5fe",
+                      "on-tertiary-container": "#f4cc80",
+                      "background": "#f8f9fa",
+                      "surface-variant": "#e1e3e4",
+                      "on-secondary-fixed": "#001947",
+                      "on-primary-fixed": "#002114",
+                      "primary-fixed-dim": "#84d7af",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2e3132",
+                      "primary-fixed": "#a0f4ca",
+                      "on-secondary-container": "#3e5182",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "primary-container": "#006747"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "display": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .tonal-shift-bg { background-color: #f8f9fa; }
+        .tonal-shift-via-opacity { background-color: rgba(255, 255, 255, 0.8); }
+    </style>
+    <style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-hidden">
+<!-- Dashboard Background (Simulating Attendance Module) -->
+<div class="fixed inset-0 z-0 flex flex-col">
+    <!-- TopAppBar -->
+    <header class="bg-[#f8f9fa] dark:bg-slate-950 flex items-center justify-between px-6 py-4 w-full top-0">
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-[#004d34] dark:text-emerald-500 cursor-pointer">menu</span>
+            <h1 class="font-['Manrope'] font-bold tracking-tight text-2xl text-[#004d34] dark:text-emerald-500 tracking-tighter">ErHa</h1>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+            <img alt="Principal Avatar" class="w-full h-full object-cover" data-alt="professional portrait of a middle-aged man in academic attire with a soft library background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-X7rWlpVjZVZjckT50bIX42GPW6b3qXEpOsZa_dP6WIcDmeQ2xigTZSq_4ZOkqiSlV9NGEYIyCk3hcqgTVq9lXYwb5QTwyB4GKhNa1ZMf5df-cMXKJdbh9IU7GOshsGbGiSRKOOQPZaAun3KFDvJ3HaXXlhE_4VbBYNEy-TZIFn-9uvH0nDbsfdFjQ4Osm9vcjnN4TVxCe6n8PHW4eIQwHXB3OgcHdi1LnZWBFyf1p5MxdDH6PN_yDKHxnyS_gCnIFLVViDmZ-6xX"/>
+        </div>
+    </header>
+    <!-- Mock Content -->
+    <main class="flex-1 p-6 space-y-8 overflow-y-auto no-scrollbar">
+        <div class="space-y-2">
+            <p class="font-label text-[11px] uppercase tracking-widest text-secondary font-medium">Daily Rhythm</p>
+            <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+                <div class="min-w-[120px] bg-primary text-on-primary p-4 rounded-xl flex flex-col gap-2">
+                    <span class="material-symbols-outlined text-xl">mosque</span>
+                    <p class="text-sm font-bold">Subuh</p>
+                    <p class="text-xs opacity-80">04:32 WIB</p>
+                </div>
+                <div class="min-w-[120px] bg-surface-container-low p-4 rounded-xl flex flex-col gap-2 border-l-4 border-primary">
+                    <span class="material-symbols-outlined text-xl text-primary">school</span>
+                    <p class="text-sm font-bold">Assembly</p>
+                    <p class="text-xs text-secondary">07:30 WIB</p>
+                </div>
+                <div class="min-w-[120px] bg-surface-container-low p-4 rounded-xl flex flex-col gap-2">
+                    <span class="material-symbols-outlined text-xl text-secondary">auto_stories</span>
+                    <p class="text-sm font-bold">Aqidah</p>
+                    <p class="text-xs text-secondary">08:15 WIB</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="md:col-span-2 space-y-4">
+                <h2 class="font-headline text-2xl font-extrabold tracking-tight">Presensi Mahasiswa</h2>
+                <div class="bg-surface-container-lowest rounded-xl p-6 space-y-6">
+                    <div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">person</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Ahmad Fauzi</p>
+                                <p class="text-sm text-secondary">Hadir • 07:15</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-full">Verified</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">person</span>
+                            </div>
+                            <div>
+                                <p class="font-bold">Siti Aminah</p>
+                                <p class="text-sm text-secondary">Hadir • 07:22</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-full">Verified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 left-0 w-full z-40 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.04)] rounded-t-xl">
+        <div class="flex flex-col items-center justify-center bg-[#004d34]/10 text-[#004d34] dark:text-emerald-400 rounded-xl px-4 py-1.5 transition-all duration-300">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest mt-1">Home</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-[#4a5d8f] dark:text-slate-500 px-4 py-1.5 hover:bg-[#004d34]/5 transition-all duration-300">
+            <span class="material-symbols-outlined">calendar_today</span>
+            <span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest mt-1">Schedule</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-[#4a5d8f] dark:text-slate-500 px-4 py-1.5 hover:bg-[#004d34]/5 transition-all duration-300">
+            <span class="material-symbols-outlined">auto_stories</span>
+            <span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest mt-1">Grades</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-[#4a5d8f] dark:text-slate-500 px-4 py-1.5 hover:bg-[#004d34]/5 transition-all duration-300">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest mt-1">Profile</span>
+        </div>
+    </nav>
+</div>
+<!-- Confirmation Dialog Overlay -->
+<div class="fixed inset-0 z-[60] flex items-center justify-center p-6 bg-on-surface/40 backdrop-blur-sm">
+    <!-- Dialog Card -->
+    <div class="bg-surface-container-lowest w-full max-w-sm rounded-[2rem] overflow-hidden shadow-[0_24px_48px_-12px_rgba(0,45,31,0.12)] animate-in fade-in zoom-in duration-300">
+        <!-- Header/Texture -->
+        <div class="h-2 bg-gradient-to-r from-primary to-primary-container"></div>
+        <div class="p-8 space-y-8">
+            <!-- Icon & Title -->
+            <div class="space-y-4 text-center">
+                <div class="mx-auto w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+                </div>
+                <h2 class="font-headline text-2xl font-extrabold text-on-surface tracking-tight">Konfirmasi Presensi?</h2>
+            </div>
+            <!-- Details Section (Using Surface Tonal Shift) -->
+            <div class="bg-surface-container-low rounded-2xl p-5 space-y-4">
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-[10px] font-bold text-secondary uppercase tracking-widest">Lokasi</p>
+                        <p class="font-bold text-on-surface">ErHa Academy</p>
+                        <p class="text-xs text-secondary/70">Cilandak, Jakarta Selatan</p>
+                    </div>
+                </div>
+                <!-- Subtle divider-less separation via container shift -->
+                <div class="flex items-start gap-4">
+                    <div class="mt-1 w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-lg">schedule</span>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-[10px] font-bold text-secondary uppercase tracking-widest">Waktu</p>
+                        <p class="font-bold text-on-surface">07:45 WIB</p>
+                        <p class="text-xs text-secondary/70">Waktu Server Tersinkronisasi</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-col gap-3">
+                <button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                    <span>Ya, Presensi</span>
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </button>
+                <button class="w-full py-4 bg-surface-container-highest/50 text-secondary font-bold rounded-xl active:scale-[0.98] transition-all hover:bg-surface-container-highest">
+                    Batal
+                </button>
+            </div>
+            <!-- Disclaimer -->
+            <p class="text-center text-[10px] text-secondary/60 leading-relaxed font-medium">
+                Data presensi akan langsung tercatat pada sistem akademik ErHa dan tidak dapat diubah tanpa persetujuan admin.
+            </p>
+        </div>
+    </div>
+</div>
+</body></html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Medali putih -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,24 A30,30 0 1,1 54,84 A30,30 0 1,1 54,24z" />
+    <!-- Bingkai hijau -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,22 A32,32 0 1,1 54,90 A32,32 0 1,1 54,22z"
+        android:strokeWidth="2.5"
+        android:strokeColor="#004D34" />
+    <!-- Penyangga emas (di bawah buku) -->
+    <path
+        android:fillColor="#E8CF2A"
+        android:pathData="M39,68 Q34.5,72 36.5,77 Q40,74.5 42.5,70.5z" />
+    <path
+        android:fillColor="#E8CF2A"
+        android:pathData="M69,68 Q73.5,72 71.5,77 Q68,74.5 65.5,70.5z" />
+    <!-- Halaman buku -->
+    <path
+        android:fillColor="#F3F6F4"
+        android:pathData="M45,56 L53,52.2 L53,72 L45,68.2z" />
+    <path
+        android:fillColor="#F3F6F4"
+        android:pathData="M55,52.2 L63,56 L63,68.2 L55,72z" />
+    <!-- Kulit / outline buku (hanya garis, isi halaman tetap terlihat) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M43.5,54.5 L54,50 L64.5,54.5 L64.5,69.5 L54,74 L43.5,69.5z"
+        android:strokeWidth="1.25"
+        android:strokeColor="#004D34" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,50 L54,74"
+        android:strokeWidth="1.15"
+        android:strokeColor="#004D34"
+        android:strokeLineCap="round" />
+    <!-- Bintang emas di atas -->
+    <path
+        android:fillColor="#F9ED32"
+        android:pathData="M54,33 L56.35,41.1 L65.05,41.1 L58.35,46.2 L60.7,54.3 L54,49.15 L47.3,54.3 L49.65,46.2 L42.95,41.1 L51.65,41.1z" />
+    <!-- Pita (siluet) -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M34,76 L74,76 Q76,76 76,78.5 L76,80 Q76,82.5 74,82.5 L34,82.5 Q32,82.5 32,80 L32,78.5 Q32,76 34,76z" />
+</vector>

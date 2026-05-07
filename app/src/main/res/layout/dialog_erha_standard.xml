@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_16sdp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/surface_container_lowest"
+        app:cardCornerRadius="@dimen/_24sdp"
+        app:cardElevation="@dimen/_8sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_8sdp"
+                android:background="@drawable/bg_erha_dialog_gradient_strip" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:maxHeight="380dp"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_24sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp">
+
+                    <!-- Ikon: mode sukses = lingkaran primer + centang; lainnya = ikon di atas blob halus -->
+                    <FrameLayout
+                        android:layout_width="@dimen/_72sdp"
+                        android:layout_height="@dimen/_72sdp"
+                        android:layout_gravity="center_horizontal">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.25"
+                            android:background="@drawable/bg_erha_icon_circle_soft" />
+
+                        <FrameLayout
+                            android:id="@+id/flStandardPrimaryBadge"
+                            android:layout_width="@dimen/_56sdp"
+                            android:layout_height="@dimen/_56sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_erha_icon_circle_primary">
+
+                            <ImageView
+                                android:id="@+id/ivStandardIconSuccess"
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_erha_popup_success"
+                                tools:ignore="ImageContrastCheck" />
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/ivStandardIconAlt"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:visibility="gone"
+                            tools:src="@drawable/ic_erha_popup_info"
+                            tools:visibility="visible" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvStandardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/_18ssp"
+                        tools:text="Berhasil!" />
+
+                    <TextView
+                        android:id="@+id/tvStandardMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="@color/secondary"
+                        android:textSize="@dimen/_13ssp"
+                        tools:text="Data kehadiran Anda telah tersimpan dan akan disinkronkan secara otomatis." />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/tvStandardFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:gravity="center"
+                android:letterSpacing="0.08"
+                android:textAllCaps="true"
+                android:textColor="@color/outline"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone"
+                tools:text="ID TRANSAKSI: ERHA-9921-2024"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStandardPositive"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:minHeight="@dimen/_48sdp"
+                android:text="@string/erha_popup_close"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14ssp"
+                app:cornerRadius="@dimen/_12sdp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Si Ramah</string>
+    <string name="school_name">Smk Robithotul Hikmah</string>
+
+    <!-- Popup reusable (referensi popupStandart / popupKonfirmasi.html) -->
+    <string name="erha_popup_close">Tutup</string>
+    <string name="erha_popup_confirm_primary">Ya</string>
+    <string name="erha_popup_confirm_cancel">Batal</string>
+    <string name="erha_popup_title_success">Berhasil!</string>
+    <string name="erha_popup_title_info">Informasi</string>
+    <string name="erha_popup_title_warning">Perhatian</string>
+    <string name="erha_popup_title_error">Maaf</string>
+    <string name="session_expired_title">Sesi berakhir</string>
+    <string name="session_expired_message">Sesi Anda tidak valid atau sudah berakhir. Silakan masuk kembali.</string>
+    <string name="session_expired_ok">OK</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="attendance_map_marker_school_title">Titik absensi sekolah</string>
+    <string name="attendance_map_marker_school_snippet">Pusat radius kehadiran</string>
+    <string name="attendance_map_marker_user_title">Posisi Anda</string>
+
+    <string name="profile_photo_content_description">Foto profil</string>
+    <string name="profile_tap_change_photo">Ganti foto</string>
+    <string name="profile_label_role">Role</string>
+    <string name="profile_label_school">Sekolah</string>
+    <string name="profile_label_class">Kelas</string>
+    <string name="profile_identity_nis">NIS / NISN</string>
+    <string name="profile_identity_nip">NIP</string>
+    <string name="profile_change_password_title">Ubah password</string>
+    <string name="profile_change_password_save">Simpan</string>
+    <string name="profile_password_validation_match">Password baru dan konfirmasi harus sama.</string>
+    <string name="profile_password_validation_length">Password baru minimal 8 karakter.</string>
+    <string name="profile_password_validation_required">Semua kolom wajib diisi.</string>
+
+    <string name="prayer_name_fajr">Subuh</string>
+    <string name="prayer_name_dhuha">Dhuha</string>
+    <string name="prayer_name_dhuhr">Dzuhur</string>
+    <string name="prayer_name_asr">Ashar</string>
+    <string name="prayer_name_maghrib">Maghrib</string>
+    <string name="prayer_name_isha">Isya</string>
+    <string name="prayer_notifications_channel_name">Pengingat sholat</string>
+    <string name="prayer_notifications_channel_desc">Notifikasi beberapa menit sebelum waktu sholat</string>
+    <string name="prayer_reminder_title">Waktu sholat</string>
+    <string name="prayer_reminder_text">%1$s pukul %2$s — Tinggal %3$d menit.</string>
+    <string name="notification_teacher_start_title">Jadwal Mengajar Akan Dimulai</string>
+    <string name="notification_teacher_start_body">%1$s dimulai pukul %2$s.</string>
+    <string name="notification_teacher_end_title">Waktu Mengajar Hampir Selesai</string>
+    <string name="notification_teacher_end_body">%1$s akan selesai pukul %2$s.</string>
+    <string name="notification_teacher_ended_title">Waktu Mengajar Selesai</string>
+    <string name="notification_teacher_ended_body">Sesi mengajar %1$s telah selesai.</string>
+    <string name="notification_student_first_title">Kegiatan Belajar Akan Dimulai</string>
+    <string name="notification_student_first_body">Pelajaran pertama dimulai pukul %1$s.</string>
+
+    <string name="schedule_teacher_week_empty_hint">Tidak ada hari mengajar pada periode ini. Tarik untuk memuat ulang atau cek semester / event akademik.</string>
+</resources>

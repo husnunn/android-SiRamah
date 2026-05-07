@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "455971327735",
+    "project_id": "tes-notif-mobile",
+    "storage_bucket": "tes-notif-mobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455971327735:android:eb4fc8ffa0a82d8128cdf2",
+        "android_client_info": {
+          "package_name": "com.gridy.erha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtlgySGI1lEwamiS0mBUVDZyYB02foOL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455971327735:android:1302ad7684a1d87428cdf2",
+        "android_client_info": {
+          "package_name": "com.gridy.rohmahapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtlgySGI1lEwamiS0mBUVDZyYB02foOL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
