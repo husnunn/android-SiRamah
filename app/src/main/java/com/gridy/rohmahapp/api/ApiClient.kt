@@ -1,9 +1,9 @@
 package com.gridy.rohmahapp.api
 
 import android.content.Context
-// import com.chuckerteam.chucker.api.ChuckerCollector
-// import com.chuckerteam.chucker.api.ChuckerInterceptor
-// import com.chuckerteam.chucker.api.RetentionManager
+ import com.chuckerteam.chucker.api.ChuckerCollector
+ import com.chuckerteam.chucker.api.ChuckerInterceptor
+ import com.chuckerteam.chucker.api.RetentionManager
 import com.gridy.rohmahapp.BuildConfig
 import com.gridy.rohmahapp.utils.PreferenceClass
 import com.gridy.rohmahapp.utils.Utils
@@ -25,18 +25,18 @@ object ApiClient {
             level = HttpLoggingInterceptor.Level.BODY
         }
 
-//        val chuckerCollector = ChuckerCollector(
-//            context = context,
-//            showNotification = true,
-//            retentionPeriod = RetentionManager.Period.ONE_HOUR
-//        )
+        val chuckerCollector = ChuckerCollector(
+            context = context,
+            showNotification = true,
+            retentionPeriod = RetentionManager.Period.ONE_HOUR
+        )
 
-//        val chuckerInterceptor = ChuckerInterceptor.Builder(context)
-//            .collector(chuckerCollector)
-//            .maxContentLength(250_000L)
-//            .redactHeaders(emptySet())
-//            .alwaysReadResponseBody(true)
-//            .build()
+        val chuckerInterceptor = ChuckerInterceptor.Builder(context)
+            .collector(chuckerCollector)
+            .maxContentLength(250_000L)
+            .redactHeaders(emptySet())
+            .alwaysReadResponseBody(true)
+            .build()
 
         val okHttpClient = OkHttpClient.Builder()
             .addInterceptor(RequestInterceptor(utils, pref))
@@ -49,8 +49,8 @@ object ApiClient {
                 )
             )
             .addInterceptor(LogFileInterceptor(utils))
-//            .addInterceptor(chuckerInterceptor)
-//            .addInterceptor(logging)
+            .addInterceptor(chuckerInterceptor)
+            .addInterceptor(logging)
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)

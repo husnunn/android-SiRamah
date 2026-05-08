@@ -20,7 +20,7 @@ import com.gridy.rohmahapp.R
 import com.gridy.rohmahapp.data.model.UpdatePasswordRequest
 import com.gridy.rohmahapp.data.state.UiState
 import com.gridy.rohmahapp.databinding.DialogChangePasswordBinding
-import com.gridy.rohmahapp.databinding.FragmentProfileBinding
+import com.gridy.rohmahapp.databinding.FragmentProfileRedesignBinding
 import com.gridy.rohmahapp.di.Injection
 import com.gridy.rohmahapp.pages.BaseFragment
 import com.gridy.rohmahapp.pages.auth.LoginActivity
@@ -33,7 +33,7 @@ import com.gridy.rohmahapp.viewmodel.factory.ProfileViewModelFactory
 
 class ProfileFragment : BaseFragment() {
 
-    private var _binding: FragmentProfileBinding? = null
+    private var _binding: FragmentProfileRedesignBinding? = null
     private val binding get() = _binding!!
 
     private val pickMedia = registerForActivityResult(
@@ -72,7 +72,7 @@ class ProfileFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileRedesignBinding.inflate(inflater, container, false)
         return binding.root
     }
 

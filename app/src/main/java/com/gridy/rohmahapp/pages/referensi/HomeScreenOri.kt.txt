@@ -1,0 +1,161 @@
+package com.gridy.rohmahapp.pages.referensi
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CalendarMonth
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.School
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SegmentedButton
+import androidx.compose.material3.SingleChoiceSegmentedButtonRow
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.agon.app.data.SchoolRepository
+import com.agon.app.data.UserRole
+import com.agon.app.ui.components.NotificationCard
+import com.agon.app.ui.components.ProfileHeaderCard
+import com.agon.app.ui.components.QuickActionsRow
+import com.agon.app.ui.components.ScheduleCard
+import com.agon.app.ui.components.SectionTitle
+import com.agon.app.ui.components.StatusPill
+import com.agon.app.ui.components.SummaryStatCard
+import kotlinx.coroutines.launch
+
+@Composable
+fun HomeScreen(
+    onNavigate: (String) -> Unit,
+    snackbarHostState: SnackbarHostState,
+) {
+    var selectedRole by rememberSaveable { mutableStateOf(UserRole.STUDENT) }
+    val profile = SchoolRepository.profileForRole(selectedRole)
+    val schedule = SchoolRepository.scheduleForRole(selectedRole)
+    val scope = rememberCoroutineScope()
+    val greeting = if (selectedRole == UserRole.STUDENT) "Selamat datang, Siswa" else "Selamat datang, Guru"
+
+    LaunchedEffect(selectedRole) {
+        snackbarHostState.showSnackbar(
+            if (selectedRole == UserRole.STUDENT) "Mode dashboard siswa aktif" else "Mode dashboard guru aktif",
+        )
+    }
+
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        item {
+            Column {
+                Text("Rohmah App", style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.primary)
+                Spacer(modifier = Modifier.height(6.dp))
+                Text(
+                    "Aplikasi sekolah yang rapi untuk siswa dan guru.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+        item {
+            SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+                SegmentedButton(
+                    shape = MaterialTheme.shapes.large,
+                    selected = selectedRole == UserRole.STUDENT,
+                    onClick = { selectedRole = UserRole.STUDENT },
+                    label = { Text("Siswa") },
+                )
+                SegmentedButton(
+                    shape = MaterialTheme.shapes.large,
+                    selected = selectedRole == UserRole.TEACHER,
+                    onClick = { selectedRole = UserRole.TEACHER },
+                    label = { Text("Guru") },
+                )
+            }
+        }
+        item {
+            ProfileHeaderCard(
+                profile = profile,
+                subtitle = greeting,
+            )
+        }
+        item {
+            QuickActionsRow(actions = SchoolRepository.quickActions, onActionClick = onNavigate)
+        }
+        item {
+            SectionTitle("Ringkasan Hari Ini")
+        }
+        item {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                SummaryStatCard(
+                    title = "Status presensi",
+                    value = if (selectedRole == UserRole.STUDENT) "Belum absen" else "Sudah check in",
+                    supporting = if (selectedRole == UserRole.STUDENT) "Segera lakukan presensi pagi" else "Masuk pukul 06:45 WIB",
+                    icon = Icons.Filled.CheckCircle,
+                )
+                SummaryStatCard(
+                    title = "Jadwal hari ini",
+                    value = "${schedule.size} sesi",
+                    supporting = schedule.firstOrNull()?.subject ?: "Belum ada jadwal",
+                    icon = Icons.Filled.CalendarMonth,
+                )
+                SummaryStatCard(
+                    title = "Pengingat",
+                    value = "2 notifikasi",
+                    supporting = "Pelajaran berikutnya 10 menit lagi",
+                    icon = Icons.Filled.Notifications,
+                )
+            }
+        }
+        item {
+            SectionTitle("Status Sekolah")
+        }
+        item {
+            androidx.compose.foundation.layout.Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                StatusPill("Dalam radius", SchoolRepository.attendanceInfo.locationStatus)
+                StatusPill(profile.schoolName, com.agon.app.data.AttendanceState.UNAVAILABLE)
+            }
+        }
+        item {
+            SectionTitle("Jadwal Hari Ini", "Lihat semua") { onNavigate("schedule") }
+        }
+        items(schedule.take(3)) { item ->
+            ScheduleCard(item)
+        }
+        item {
+            SectionTitle("Notifikasi & Pengingat", "Buka") {
+                scope.launch { snackbarHostState.showSnackbar("Membuka daftar notifikasi") }
+                onNavigate("notifications")
+            }
+        }
+        items(SchoolRepository.notifications.take(2)) { item ->
+            NotificationCard(item)
+        }
+        item {
+            Spacer(modifier = Modifier.height(8.dp))
+            SummaryStatCard(
+                title = "Informasi sekolah",
+                value = if (selectedRole == UserRole.STUDENT) profile.className ?: "-" else "Ruang Guru Aktif",
+                supporting = if (selectedRole == UserRole.STUDENT) "Kelas dan wali kelas tersedia" else "Jadwal mengajar tersinkron",
+                icon = Icons.Filled.School,
+            )
+        }
+    }
+}

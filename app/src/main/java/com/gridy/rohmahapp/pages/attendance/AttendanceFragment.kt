@@ -23,7 +23,7 @@ import com.gridy.rohmahapp.data.model.AttendanceMapUi
 import com.gridy.rohmahapp.data.model.AttendanceSiteOptionUi
 import com.gridy.rohmahapp.data.model.AttendanceTodayUi
 import com.gridy.rohmahapp.data.state.UiState
-import com.gridy.rohmahapp.databinding.FragmentAttendanceBinding
+import com.gridy.rohmahapp.databinding.FragmentAttendanceRedesignBinding
 import com.gridy.rohmahapp.di.Injection
 import com.gridy.rohmahapp.pages.BaseFragment
 import com.gridy.rohmahapp.ui.popup.ErHaStandardStyle
@@ -38,7 +38,7 @@ import java.util.Locale
 
 class AttendanceFragment : BaseFragment() {
 
-    private var _binding: FragmentAttendanceBinding? = null
+    private var _binding: FragmentAttendanceRedesignBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var viewModel: AttendanceViewModel
@@ -90,7 +90,7 @@ class AttendanceFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAttendanceBinding.inflate(inflater, container, false)
+        _binding = FragmentAttendanceRedesignBinding.inflate(inflater, container, false)
         return binding.root
     }
 

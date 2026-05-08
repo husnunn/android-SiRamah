@@ -1,0 +1,337 @@
+<!-- File: app/src/main/res/layout/screen_home.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/homeScrollView"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+android:background="?android:attr/windowBackground">
+
+<LinearLayout
+android:id="@+id/homeContainer"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="16dp">
+
+<!-- Header Title -->
+<TextView
+android:id="@+id/tvAppTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Rohmah App"
+android:textSize="24sp"
+android:textStyle="bold"
+android:textColor="?attr/colorPrimary" />
+
+<TextView
+android:id="@+id/tvAppSubtitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="6dp"
+android:text="Aplikasi sekolah yang rapi untuk siswa dan guru."
+android:textSize="14sp"
+android:textColor="#6B7280" />
+
+<!-- Role Selector -->
+<LinearLayout
+android:id="@+id/roleSelectorContainer"
+android:layout_width="match_parent"
+android:layout_height="48dp"
+android:layout_marginTop="16dp"
+android:orientation="horizontal"
+android:background="@drawable/bg_card"
+android:padding="4dp">
+
+<TextView
+android:id="@+id/btnStudent"
+android:layout_width="0dp"
+android:layout_height="match_parent"
+android:layout_weight="1"
+android:gravity="center"
+android:text="Siswa"
+android:textStyle="bold"
+android:textColor="#FFFFFF"
+android:background="@drawable/bg_segment_selected" />
+
+<TextView
+android:id="@+id/btnTeacher"
+android:layout_width="0dp"
+android:layout_height="match_parent"
+android:layout_weight="1"
+android:gravity="center"
+android:text="Guru"
+android:textStyle="bold"
+android:textColor="#111827"
+android:background="@drawable/bg_segment_unselected" />
+
+</LinearLayout>
+
+<!-- Profile Header Card -->
+<LinearLayout
+android:id="@+id/profileCard"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:orientation="vertical"
+android:background="@drawable/bg_card"
+android:padding="16dp">
+
+<TextView
+android:id="@+id/tvGreeting"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Selamat datang, Siswa"
+android:textSize="14sp"
+android:textColor="#6B7280" />
+
+<TextView
+android:id="@+id/tvProfileName"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="4dp"
+android:text="Ahmad Fulan"
+android:textSize="20sp"
+android:textStyle="bold"
+android:textColor="#111827" />
+
+<TextView
+android:id="@+id/tvProfileInfo"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="4dp"
+android:text="Kelas 10-A"
+android:textSize="14sp"
+android:textColor="?attr/colorPrimary" />
+
+</LinearLayout>
+
+<!-- Quick Actions -->
+<LinearLayout
+android:id="@+id/quickActionCard"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:orientation="horizontal"
+android:gravity="center"
+android:background="@drawable/bg_card"
+android:padding="16dp">
+
+<TextView
+android:id="@+id/actionAttendance"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:gravity="center"
+android:text="Presensi"
+android:textSize="13sp"
+android:textColor="#111827" />
+
+<TextView
+android:id="@+id/actionSchedule"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:gravity="center"
+android:text="Jadwal"
+android:textSize="13sp"
+android:textColor="#111827" />
+
+<TextView
+android:id="@+id/actionTask"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:gravity="center"
+android:text="Tugas"
+android:textSize="13sp"
+android:textColor="#111827" />
+
+<TextView
+android:id="@+id/actionProfile"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:gravity="center"
+android:text="Profil"
+android:textSize="13sp"
+android:textColor="#111827" />
+
+</LinearLayout>
+
+<!-- Ringkasan Hari Ini -->
+<TextView
+android:id="@+id/tvSummaryTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:text="Ringkasan Hari Ini"
+android:textSize="18sp"
+android:textStyle="bold"
+android:textColor="#111827" />
+
+<LinearLayout
+android:id="@+id/summaryContainer"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="12dp"
+android:orientation="vertical" />
+
+<!-- Status Sekolah -->
+<TextView
+android:id="@+id/tvSchoolStatusTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:text="Status Sekolah"
+android:textSize="18sp"
+android:textStyle="bold"
+android:textColor="#111827" />
+
+<LinearLayout
+android:id="@+id/statusContainer"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="12dp"
+android:orientation="horizontal">
+
+<TextView
+android:id="@+id/tvLocationStatus"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Dalam radius"
+android:textSize="12sp"
+android:textStyle="bold"
+android:textColor="#166534"
+android:background="@drawable/bg_pill_success"
+android:paddingHorizontal="12dp"
+android:paddingVertical="6dp" />
+
+<TextView
+android:id="@+id/tvSchoolName"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="8dp"
+android:text="Nama Sekolah"
+android:textSize="12sp"
+android:textStyle="bold"
+android:textColor="#374151"
+android:background="@drawable/bg_pill_neutral"
+android:paddingHorizontal="12dp"
+android:paddingVertical="6dp" />
+
+</LinearLayout>
+
+<!-- Jadwal Hari Ini -->
+<LinearLayout
+android:id="@+id/scheduleHeader"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:orientation="horizontal"
+android:gravity="center_vertical">
+
+<TextView
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:text="Jadwal Hari Ini"
+android:textSize="18sp"
+android:textStyle="bold"
+android:textColor="#111827" />
+
+<TextView
+android:id="@+id/btnSeeAllSchedule"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Lihat semua"
+android:textSize="14sp"
+android:textColor="?attr/colorPrimary" />
+
+</LinearLayout>
+
+<LinearLayout
+android:id="@+id/scheduleContainer"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="12dp"
+android:orientation="vertical" />
+
+<!-- Notifikasi -->
+<LinearLayout
+android:id="@+id/notificationHeader"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:orientation="horizontal"
+android:gravity="center_vertical">
+
+<TextView
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:text="Notifikasi &amp; Pengingat"
+android:textSize="18sp"
+android:textStyle="bold"
+android:textColor="#111827" />
+
+<TextView
+android:id="@+id/btnOpenNotifications"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Buka"
+android:textSize="14sp"
+android:textColor="?attr/colorPrimary" />
+
+</LinearLayout>
+
+<LinearLayout
+android:id="@+id/notificationContainer"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="12dp"
+android:orientation="vertical" />
+
+<!-- Informasi Sekolah -->
+<LinearLayout
+android:id="@+id/schoolInfoCard"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:layout_marginBottom="16dp"
+android:orientation="vertical"
+android:background="@drawable/bg_card"
+android:padding="16dp">
+
+<TextView
+android:id="@+id/tvSchoolInfoTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Informasi sekolah"
+android:textSize="14sp"
+android:textColor="#6B7280" />
+
+<TextView
+android:id="@+id/tvSchoolInfoValue"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="4dp"
+android:text="Kelas 10-A"
+android:textSize="18sp"
+android:textStyle="bold"
+android:textColor="#111827" />
+
+<TextView
+android:id="@+id/tvSchoolInfoSupporting"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="4dp"
+android:text="Kelas dan wali kelas tersedia"
+android:textSize="13sp"
+android:textColor="#6B7280" />
+
+</LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

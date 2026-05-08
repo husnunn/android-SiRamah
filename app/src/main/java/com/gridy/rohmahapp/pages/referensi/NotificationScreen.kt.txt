@@ -1,0 +1,38 @@
+package com.gridy.rohmahapp.pages.referensi
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.agon.app.data.SchoolRepository
+import com.agon.app.ui.components.NotificationCard
+
+@Composable
+fun NotificationsScreen(snackbarHostState: SnackbarHostState) {
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(16.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        item {
+            Column {
+                Text("Notifikasi", style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.primary)
+                Spacer(modifier = Modifier.height(6.dp))
+                Text("Pengingat jadwal, info sekolah, dan status presensi.", color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+        items(SchoolRepository.notifications) { item ->
+            NotificationCard(item)
+        }
+    }
+}

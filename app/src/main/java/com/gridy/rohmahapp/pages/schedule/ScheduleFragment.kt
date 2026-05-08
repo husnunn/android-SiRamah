@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gridy.rohmahapp.di.Injection
 import com.gridy.rohmahapp.data.state.UiState
-import com.gridy.rohmahapp.databinding.FragmentScheduleBinding
+import com.gridy.rohmahapp.databinding.FragmentScheduleRedesignBinding
 import com.gridy.rohmahapp.pages.BaseFragment
 import com.gridy.rohmahapp.viewmodel.ScheduleViewModel
 import com.gridy.rohmahapp.viewmodel.factory.ScheduleViewModelFactory
@@ -20,7 +20,7 @@ import java.util.Locale
 
 class ScheduleFragment : BaseFragment() {
 
-    private var _binding: FragmentScheduleBinding? = null
+    private var _binding: FragmentScheduleRedesignBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var scheduleAdapter: ScheduleAdapter
@@ -46,7 +46,7 @@ class ScheduleFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentScheduleBinding.inflate(inflater, container, false)
+        _binding = FragmentScheduleRedesignBinding.inflate(inflater, container, false)
         return binding.root
     }
 

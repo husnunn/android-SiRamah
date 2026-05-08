@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.gridy.rohmahapp.databinding.ItemScheduleBinding
+import com.gridy.rohmahapp.databinding.ItemScheduleRedesignBinding
 
 class ScheduleAdapter : RecyclerView.Adapter<ScheduleAdapter.ScheduleViewHolder>() {
 
@@ -17,7 +17,7 @@ class ScheduleAdapter : RecyclerView.Adapter<ScheduleAdapter.ScheduleViewHolder>
     }
 
     inner class ScheduleViewHolder(
-        private val binding: ItemScheduleBinding
+        private val binding: ItemScheduleRedesignBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: ScheduleUi) {
@@ -45,7 +45,7 @@ class ScheduleAdapter : RecyclerView.Adapter<ScheduleAdapter.ScheduleViewHolder>
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewHolder {
-        val binding = ItemScheduleBinding.inflate(
+        val binding = ItemScheduleRedesignBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false

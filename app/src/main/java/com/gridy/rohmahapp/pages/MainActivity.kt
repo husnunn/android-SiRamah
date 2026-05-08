@@ -15,7 +15,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.gridy.rohmahapp.R
 import com.gridy.rohmahapp.data.local.sync.AppRemoteRefreshGate
-import com.gridy.rohmahapp.databinding.ActivityMainBinding
+import com.gridy.rohmahapp.databinding.ActivityMainRedesignBinding
 import com.gridy.rohmahapp.di.Injection
 import com.gridy.rohmahapp.utils.NotificationHelper
 import kotlinx.coroutines.CoroutineScope
@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 
 class MainActivity : BaseActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainRedesignBinding
     private lateinit var navController: NavController
     private val ioScope = CoroutineScope(Dispatchers.IO)
 
@@ -37,7 +37,7 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainRedesignBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupInsets()

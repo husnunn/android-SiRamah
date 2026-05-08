@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import com.gridy.rohmahapp.di.Injection
 import com.gridy.rohmahapp.api.PrayerApiClient
 import com.gridy.rohmahapp.data.state.UiState
-import com.gridy.rohmahapp.databinding.FragmentDashboardBinding
+import com.gridy.rohmahapp.databinding.FragmentDashboardRedesignBinding
 import com.gridy.rohmahapp.pages.BaseFragment
 import com.gridy.rohmahapp.repository.PrayerRepository
 import com.gridy.rohmahapp.utils.PrayerReminderScheduler
@@ -21,7 +21,7 @@ import com.gridy.rohmahapp.viewmodel.factory.ScheduleViewModelFactory
 
 class DashboardFragment : BaseFragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentDashboardRedesignBinding? = null
     private val binding get() = _binding!!
 
     override fun isSwipeRefreshEnabled(): Boolean = true
@@ -52,7 +52,7 @@ class DashboardFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentDashboardRedesignBinding.inflate(inflater, container, false)
         return binding.root
     }
 
